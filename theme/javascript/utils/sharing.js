@@ -16,7 +16,7 @@ define([
             window.open("https://plus.google.com/share?url="+encodeURIComponent(location.href))
         },
         "weibo": function($el) {
-            window.open("http://service.weibo.com/share/share.php?content=utf-8&url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent($("title").text()))
+            window.open("http://service.weibo.com/share/share.php?content=utf-8&url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent($("title").text() + " #知笔墨#"))
         },
         "instapaper": function($el) {
             window.open("http://www.instapaper.com/text?u="+encodeURIComponent(location.href));
