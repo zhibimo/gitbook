@@ -16,14 +16,14 @@ define([
     };
 
     var enlargeFontSize = function(e){
-        if (fontState.size < 4){
+        if (fontState.size < 3){
             fontState.size++;
             fontState.save();
         }
     };
 
     var reduceFontSize = function(e){
-        if (fontState.size > 0){
+        if (fontState.size > 1){
             fontState.size--;
             fontState.save();
         }
