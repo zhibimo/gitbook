@@ -2,6 +2,10 @@ define([
     "jQuery"
 ], function($) {
     var types = {
+        "wechat": function($el) {
+            // TODO: generate current url QR and show.
+            console.log("sharing from wechat");
+        },
         "twitter": function($el) {
             window.open("http://twitter.com/home?status="+encodeURIComponent($("title").text()+" "+location.href))
         },
