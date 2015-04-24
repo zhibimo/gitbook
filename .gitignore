@@ -30,3 +30,4 @@ theme/vendors
 # vim swapfile
 *.swp
 _book
+normal-book/
