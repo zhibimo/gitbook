@@ -20,7 +20,6 @@
         "semver": "2.2.1",
         "npmi": "0.1.1",
         "cheerio": "0.19.0",
-        "gitbook-plugin-livereload": "0.0.1",
         "chokidar": "~1.0.1",
         "send": "0.2.0",
         "tiny-lr": "0.1.5",
@@ -33,7 +32,9 @@
         "dom-serializer": "0.1.0",
         "spawn-cmd": "0.0.2",
         "highlight.js": "8.4.0",
-        "escape-string-regexp": "1.0.3"
+        "escape-string-regexp": "1.0.3",
+        "gitbook-plugin-livereload": "0.0.1",
+        "gitbook-plugin-tongji": "0.0.1"
     },
     "devDependencies": {
         "mocha": "2.2.1",
