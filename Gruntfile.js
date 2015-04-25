@@ -5,7 +5,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks("grunt-bower-install-simple");
+    grunt.loadNpmTasks('grunt-bower-install-simple');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-exec');
 
     // Init GRUNT configuraton
     grunt.initConfig({
@@ -77,6 +79,18 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        watch: {
+          files: ['theme/**/*'],
+          tasks: ['build-book'],
+          options: { spawn: false }
+        },
+        exec: {
+          build_book: {
+            command: 'gitbook build ./sample-book',
+            stdout: true,
+            stderr: true 
+          }
         }
     });
 
@@ -88,6 +102,12 @@ module.exports = function (grunt) {
         'less',
         'requirejs',
         'copy:vendors'
+    ]);
+
+    grunt.registerTask('build-book', [
+      'less',
+      'requirejs',
+      "exec:build_book"
     ]);
 
     grunt.registerTask('default', [

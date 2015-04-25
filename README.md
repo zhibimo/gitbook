@@ -15,6 +15,21 @@ Complete documentation is available at [help.gitbook.com](http://help.gitbook.co
 
 ![Image](https://raw.github.com/GitbookIO/gitbook/master/preview.png)
 
+## How to watch the javascript and stylesheets changed
+
+```
+# This's auto watched and auto build ./sample-book
+cd $PROJECT_FOLDER
+npm install
+./node_modules/.bin/grunt watch 
+```
+
+```
+# another terminal
+cd $PROJECT_FOLDER
+gitbook serve ./sample-book
+```
+
 ## How to use it:
 
 GitBook can be installed from **NPM** using:
@@ -227,3 +242,4 @@ $ gitbook versions:link 2.0.0 ./gitbook
 Now the version tag `2.0.0` wil be associated with the `./gitbook` folder.
 
 You can uninstall it using: `gitbook versions:uninstall 2.0.0`.
+
