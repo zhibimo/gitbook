@@ -1,10 +1,26 @@
 define([
-    "jQuery"
-], function($) {
+    "jQuery",
+    "QRCode"
+], function($, QRCode) {
     var types = {
         "wechat": function($el) {
+            $("#wechat_qrcode").empty();
+            new QRCode("wechat_qrcode", {
+              text: location.href,
+              width: 230,
+              height: 230,
+              colorDark : "#222",
+              colorLight : "#eee"
+            });
+
             // TODO: generate current url QR and show.
-            console.log("sharing from wechat");
+            $("#wechat_mask").show().off('click').on('click', function() {
+              $("#wechat_mask").hide()
+            });
+
+            $("#wechat_qrcode_wrapper > span").off('click').on('click', function() {
+              $("#wechat_mask").hide()
+            });
         },
         "twitter": function($el) {
             window.open("http://twitter.com/home?status="+encodeURIComponent($("title").text()+" "+location.href))

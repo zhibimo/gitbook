@@ -48,7 +48,8 @@ module.exports = function (grunt) {
                         "Mousetrap": '../vendors/mousetrap/mousetrap',
                         "lunr": '../vendors/lunr.js/lunr',
                         "URIjs": '../vendors/URIjs/src/',
-                        "ace": '../vendors/ace-builds/src-noconflict/'
+                        "ace": '../vendors/ace-builds/src-noconflict/',
+                        "QRCode": '../vendors/qrcode.js/qrcode'
                     },
                     shim: {
                         'jQuery': {
@@ -62,6 +63,9 @@ module.exports = function (grunt) {
                         },
                         'lunr': {
                             exports: 'lunr'
+                        },
+                        'QRCode': {
+                            exports: 'QRCode'
                         }
                     }
                 }
