@@ -4,7 +4,10 @@ define([
 ], function($, QRCode) {
     var types = {
         "wechat": function($el) {
+
             $("#wechat_qrcode").empty();
+            $(".page-wrapper").addClass("blur")
+
             new QRCode("wechat_qrcode", {
               text: location.href,
               width: 230,
@@ -13,13 +16,14 @@ define([
               colorLight : "#eee"
             });
 
-            // TODO: generate current url QR and show.
             $("#wechat_mask").show().off('click').on('click', function() {
               $("#wechat_mask").hide()
+              $(".page-wrapper").removeClass("blur")
             });
 
             $("#wechat_qrcode_wrapper > span").off('click').on('click', function() {
               $("#wechat_mask").hide()
+              $(".page-wrapper").removeClass("blur")
             });
         },
         "twitter": function($el) {
