@@ -2,6 +2,35 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.2.0
+- Fix direction in code blocks (always LTR)
+- Add options `chapterMark` and `pageBreaksBefore` for PDF
+- Update code highlighting library
+- `book.json` accessible as `config` in templating syntax
+- Add Vietnamese translation (`vi`)
+
+## 2.1.0
+- Fix error in calcul of `levels` in table of contents, error introduced a few versions ago
+- Add optional `styles/print.css` to replace `print.css` used in ebook
+
+## 2.0.4
+- Fix `{% raw %}`, got confused with "fake" variable declarations
+- Fix title of language chooser
+- Fix the X-UA-Compatible meta tag
+- Move style sheets to the <head> section
+
+## 2.0.3
+- Fix `gitbook init` for SUMMARY with empty entries
+- Fix escaping of code blocks in markdown
+
+## 2.0.2
+- Fix relative links in windows
+- Improve watcher in serve command (switch to chokidar)
+- Add Romanian translation (`ro`)
+- Add Finish translation (`fi`)
+- Add Japanese translation (`jp`)
+- Add Korean translation (`kr`)
+
 ## 2.0.1
 - Improve error logging (display file, line and column)
 - Add back support for `options.originalInput`

@@ -1,6 +1,6 @@
 {
     "name": "gitbook",
-    "version": "2.0.1",
+    "version": "2.2.0",
     "homepage": "https://www.gitbook.com",
     "description": "Library and cmd utility to generate GitBooks",
     "main": "lib/index.js",
@@ -12,10 +12,10 @@
         "resolve": "0.6.3",
         "fs-extra": "0.16.5",
         "fstream-ignore": "1.0.2",
-        "gitbook-parsers": "0.7.4",
-        "nunjucks": "1.3.0",
-        "nunjucks-autoescape": "0.1.1",
-        "nunjucks-filter": "0.1.0",
+        "gitbook-parsers": "0.7.6",
+        "nunjucks": "mozilla/nunjucks#103513c294835bcbe64222de6db494e2555e294e",
+        "nunjucks-autoescape": "1.0.0",
+        "nunjucks-filter": "1.0.0",
         "i18n": "0.5.0",
         "semver": "2.2.1",
         "npmi": "0.1.1",
@@ -31,8 +31,8 @@
         "npm": "2.4.1",
         "dom-serializer": "0.1.0",
         "spawn-cmd": "0.0.2",
-        "highlight.js": "8.4.0",
-        "escape-string-regexp": "1.0.3",
+        "highlight.js": "8.6.0",
+        "escape-string-regexp": "1.0.3"
         "gitbook-plugin-livereload": "0.0.1",
         "gitbook-plugin-tongji": "0.0.1"
     },
@@ -64,7 +64,7 @@
         "gitbook"
     ],
     "author": "FriendCode Inc. <contact@gitbook.com>",
-    "license": "Apache 2",
+    "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/GitbookIO/gitbook/issues"
     },
