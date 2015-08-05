@@ -1,4 +1,27 @@
 .book {
+  .book-nav {
+    height: @header-height;
+    line-height: @header-height;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    .transition(top 0.5s ease);
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: @sidebar-link-color;
+    background: @sidebar-link-background;
+    white-space: nowrap;
+  }
+}
+
+.book {
     .book-summary {
         font-family: @font-family-sans;
 
@@ -41,7 +64,7 @@
 
         ul.summary {
             position: absolute;
-            top: 0px;
+            top: @header-height;
             left: 0px;
             right: 0px;
             bottom: 0px;
@@ -138,8 +161,12 @@
                 top: 0px;
             }
 
-            ul.summary {
+            .book-nav {
                 top: @header-height;
+            }
+
+            ul.summary {
+                top: @header-height * 2;
             }
         }
     }
